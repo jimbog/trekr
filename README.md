@@ -6,4 +6,9 @@ This is a group project consisting of three students attending Week 8 of General
 
 This idea came about from research into the travel market where we found there was a market opportunity for an online group travel application.  Headaches from planning group trips from back and forth emails and a need for having everything viewable in one location spawned our idea for TREKR.
 
+LoginPage details
+_______________________
+
+authentication
+
 
