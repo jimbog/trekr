@@ -24,6 +24,6 @@ RSpec.describe User, :type => :model do
 	it "is invalid without a last name"
 	it "returns a user's full name as a string"
 	it "is invalid without an email address"
-	it "is invalid if email isn't formatted properly"
+	it " is invalid if email isn't formatted properly"
 	it "is invalid if a user tries to sign up with an email address that already exists in our database, regardless of capitalization"
 end
