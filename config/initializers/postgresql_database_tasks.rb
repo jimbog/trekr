@@ -1,4 +1,5 @@
 # config/initializers/postgresql_database_tasks.rb
+# stops other sessions that are running and drops database
 module ActiveRecord
   module Tasks
     class PostgreSQLDatabaseTasks
