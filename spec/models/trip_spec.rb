@@ -20,5 +20,10 @@ RSpec.describe Trip, :type => :model do
 		expect(trip_length).to be_invalid
 	end
 
+	it "is invalid without a price range" do 
+		price_range = FactoryGirl.build(:trip, price_range: nil)
+		expect(price_range).to be_invalid
+	end
+
 
 end
