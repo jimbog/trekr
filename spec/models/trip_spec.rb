@@ -25,5 +25,10 @@ RSpec.describe Trip, :type => :model do
 		expect(price_range).to be_invalid
 	end
 
+	it "is valid if the privacy setting is turned off" do 
+		privacy = FactoryGirl.build(:trip, privacy: false)
+		expect(privacy).to be_valid
+	end
+
 
 end
