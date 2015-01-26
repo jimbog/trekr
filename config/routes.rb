@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   # get '/' => "users#index"
 
-  resources :users
+
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
-  resources :users
+ 
 
   root 'users#index'
   
