@@ -15,4 +15,10 @@ RSpec.describe Trip, :type => :model do
 		expect(location).to be_invalid
 	end
 
+	it "is invalid without a trip length" do
+		trip_length = FactoryGirl.build(:trip, length_trip: nil)
+		expect(trip_length).to be_invalid
+	end
+
+
 end
