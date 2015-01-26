@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :trip do
-    name "MyString"
+    name "Cristiano"
 	location "MyString"
 	avatar "MyString"
 	length_trip "MyString"

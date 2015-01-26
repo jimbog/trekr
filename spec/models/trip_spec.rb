@@ -6,7 +6,8 @@ RSpec.describe Trip, :type => :model do
 	end
 
 	it "is invalid without a name" do 
-		user = FactoryGirl.build(:trip, name: nil)
-		expect(user).to be_invalid
+		trip_name = FactoryGirl.build(:trip, name: nil)
+		expect(trip_name).to be_invalid
 	end
+
 end
