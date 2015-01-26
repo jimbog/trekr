@@ -10,4 +10,9 @@ RSpec.describe Trip, :type => :model do
 		expect(trip_name).to be_invalid
 	end
 
+	it "is invalid without a location" do 
+		location = FactoryGirl.build(:trip, location: nil)
+		expect(location).to be_invalid
+	end
+
 end
