@@ -259,4 +259,5 @@ Devise.setup do |config|
   #Add your ID and secret here
   #ID first, secret second
   config.omniauth :digitalocean, "55a2c8452a2d444e8bc525e532f316d33c9fc4e90c96bcfc7a97ce8dbe4ed186", "a3ab0629a04f781a4d4f056632dc9eeaca146566349a0d7d166401c0c6fd58e8"
+  config.omniauth :facebook, "435656936591616", "cd74a447f239c9b928c490db7cf9ed1f"
 end

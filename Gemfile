@@ -30,6 +30,7 @@ gem 'therubyracer'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-digitalocean'
+gem 'omniauth-facebook'
 
 group :development, :test do 
 	gem 'rspec-rails'
