@@ -1,12 +1,7 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  include ActiveModel::SecurePassword
-  field :name, type: String
-  field :email, type: String
-  field :password_digest, type: String
-  has_secure_password
-  attr_reader :password
+  
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
@@ -21,7 +16,4 @@ class User < ActiveRecord::Base
       end
   end
 
-  validates :name, presence: true
-  validates :email, presence: true, uniqueness: { case_sensitive: false },
-  format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
 end
