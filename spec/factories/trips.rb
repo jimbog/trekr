@@ -3,7 +3,9 @@ FactoryGirl.define do
     name "Cristiano"
 	location "San Francisco"
 	avatar "MyString"
-	length_trip 3
+	start_date '2015-02-01'
+	end_date '2015-02-06'
+	length_trip 5
 	price_range 1
 	privacy false
 	admin "MyString"

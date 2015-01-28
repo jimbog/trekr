@@ -3,4 +3,5 @@ class Trip < ActiveRecord::Base
 	validates :location, presence: true
 	validates :length_trip, presence: true
 	validates :price_range, presence: true
+
 end

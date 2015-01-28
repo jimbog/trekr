@@ -30,5 +30,4 @@ RSpec.describe Trip, :type => :model do
 		expect(privacy).to be_valid
 	end
 
-
 end
