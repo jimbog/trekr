@@ -2,11 +2,10 @@ Rails.application.routes.draw do
 
 
   get '/' => "users#index"
-
- 
+  # resources :users
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
  
-  root 'users#index'
+  root 'users#edit'
   
 
   # The priority is based upon order of creation: first created -> highest priority.
