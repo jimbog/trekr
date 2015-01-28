@@ -3,20 +3,5 @@
 <h1><%= current_user.email %>, welcome to your TREKR profile page!</h1>
 
 <br>
-<%= form_for current_user.email do |f| %>
-  <div>
-    <%= f.label :name, "Your name" %>
-    <%= f.text_field :name %>
-  </div>
-  <div>
-    <%= f.label :home_city, "Your Home City" %>
-    <%= f.text_field :home_city %>
-  </div>
-  <div>
-    <%= f.label :avatar, "Your Avatar" %>
-    <%= f.file_field :avatar %>
-  </div>
-  <%= f.submit "Update Profile" %>
-<% end %>
 
-<%= link_to "Go to your updated profile page", root_path %>
+<%= link_to "Go to your updated profile page", users_edit_path %>

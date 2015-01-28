@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+
+
 	def index
 		
 	end
@@ -14,7 +16,7 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(user_params)
 		if @user.save
-			redirect_to user_path(current_user)
+			redirect_to user_path(current_user), :notice => "Thanks for signing up! Get ready and starting TREKR-ing!"
 		else
 			render :new
 		end

@@ -1,0 +1,17 @@
+<h1>Add or update to your TREKR user profile here</h1>
+
+<%= form_for current_user.email do |f| %>
+  <div>
+    <%= f.label :name, "Your name" %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :home_city, "Your Home City" %>
+    <%= f.text_field :home_city %>
+  </div>
+  <!-- <div>
+    <%= f.label :avatar, "Your Avatar" %>
+    <%= f.file_field :avatar %>
+  </div> -->
+  <%= f.submit "Update Profile" %>
+<% end %>
