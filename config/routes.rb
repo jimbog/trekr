@@ -9,8 +9,10 @@ Rails.application.routes.draw do
 
   root 'users#index'
   
-  get '/activities' => 'activities#index'
-  get '/activities' => 'activities#new'
+  resources :activities
+  # get '/activities' => 'activities#index'
+  # get '/activities' => 'activities#new'
+  # get '/activities' => 'activities#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
