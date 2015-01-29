@@ -1,17 +1,17 @@
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
-<h1>SUP ELAINE</h1>
+
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
   <div>
-    <%= f.label :name, "Your name" %>
+    <%= f.label :name, "Your name" %><br />
     <%= f.text_field :name %>
   </div>
   <div>
-    <%= f.label :home_city, "Your Home City" %>
+    <%= f.label :home_city, "Your Home City" %><br />
     <%= f.text_field :home_city %>
   </div>
   <div>
-    <%= f.label :avatar, "Your Avatar" %>
+    <%= f.label :avatar, "Your Avatar" %><br />
     <%= f.file_field :avatar %>
   </div>
 
