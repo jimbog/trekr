@@ -8,17 +8,6 @@ RSpec.describe User, :type => :model do
   # is invalid without a last name
   # it{expect(subject).to be_invalid}
 
-  # raises an error without a name
-  # it{expect{subject.save!}.to raise_error(ActiveRecord::RecordInvalid)}
-
-  # is invalid without an email address
-
-  # is invalid if email isn't formatted properly
-
-  # is invalid if a user tries to sign up with an email address that already exists
-# require 'rails_helper'
-
-# RSpec.describe User, :type => :model do
 	it "has a valid factory" do
 		expect(FactoryGirl.build(:user)).to be_valid
 	end
