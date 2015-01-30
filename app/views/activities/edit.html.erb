@@ -39,10 +39,10 @@
 
 		<%= a.submit "Submit Change" %>
 
-<% end %>
 <%= button_to "Cancel", activities_path, :class => "button", :method => :get  %>
+<%= link_to "Delete Activity", :activity, method: :delete, data: {confirm: "Are you sure?"} %>
 
-
+<% end %>
 
 
 
