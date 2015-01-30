@@ -1,0 +1,14 @@
+<h1>comments index page</h1>
+
+<div>
+	<ul>
+		<% @comments.each do |c| %>
+			<li>
+			<%= link_to c.comment, comment_path(c) %>
+			</li>
+		<% end %>
+	</ul>
+</div>
+
+
+<%= link_to "Add Comment", new_comment_path %>

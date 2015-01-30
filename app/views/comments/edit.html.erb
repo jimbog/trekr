@@ -1,0 +1,13 @@
+<h1>Edit Comment</h1>
+
+<%= form_for @comment do |c| %>
+	<div>
+		<%= c.label :comment, "Comment" %>
+		<%= c.text_area :comment %>
+	</div>
+
+	<%= c.submit "Submit" %>
+
+<% end %><br>
+
+<%= link_to "Delete", :comment, method: :delete, data: {confirm: "Are you sure?"} %>

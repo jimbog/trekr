@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # get "/users/edit" => "users#edit"
   get "/users/show" => "users#show"
   resources :activities
-
+  resources :comments
 
   namespace :api do
     resources :users do
