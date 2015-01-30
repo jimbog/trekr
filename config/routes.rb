@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   
   resources :activities
   # get '/activities' => 'activities#index'
-  get '/activity/new' => 'activities#new'
+  #get '/activities/new' => 'activities#new'
   # get '/activities' => 'activities#create'
 
   # The priority is based upon order of creation: first created -> highest priority.

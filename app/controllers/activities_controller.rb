@@ -4,6 +4,10 @@ class ActivitiesController < ApplicationController
 		@activities = Activity.all
 	end
 
+	def show
+		@activity = Activity.find(params[:id])
+	end
+
 	def new
 		@activity = Activity.new
 	end
@@ -19,9 +23,17 @@ class ActivitiesController < ApplicationController
 	end
 
 	def edit
+		@activity = Activity.find(params[:id])
 	end
 
 	def update
+		@activity = Activity.find(params[:id])
+		if @activity.update_attributes(activity_params)
+
+			redirect_to activities_path
+		else
+			render "edit"
+		end
 	end
 
 	def destroy
