@@ -1,7 +1,53 @@
-<h1>category: "MyString"</h1>
-<h1>name: "MyString"</h1>
-<h1>address: "MyString"</h1>
-<h1>date_start: "2015-01-26 16:03:45"</h1>
-<h1>date_end: "2015-01-26 16:03:45"</h1>
-<h1>description: "MyText"</h1>
-<h1>cost: 1.5</h1>
+<h1>Create New Activity</h1>
+
+<p>Let the fun begin.  Add your activities below!</p>
+
+<%= form_for @activity do |a| %>
+
+<div>
+	<%= a.label :category, "Category:" %>
+	<%= a.text_field :category %>
+</div>
+
+<div>
+	<%= a.label :name, "Name:" %>
+	<%= a.text_field :name %>
+</div>
+
+<div>
+	<%= a.label :address, "Address:" %>
+	<%= a.text_field :address %>
+</div>
+
+<div>
+	<%= a.label :date_start, "Start Date:" %>
+	<%= a.text_field :date_start %>
+</div>
+
+<div>
+	<%= a.label :date_end, "End Date:" %>
+	<%= a.text_field :date_end %>
+</div>
+
+<div>
+	<%= a.label :description, "Description:" %>
+	<%= a.text_field :description %>
+</div>
+
+<div>
+	<%= a.label :cost, "Cost:" %>
+	<%= a.text_field :cost %>
+</div>
+
+<%= a.submit "Submit" %>
+
+<% end %>
+
+
+
+
+
+
+
+
+
