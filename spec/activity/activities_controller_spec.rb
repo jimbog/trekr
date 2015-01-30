@@ -32,13 +32,16 @@ RSpec.describe ActivitiesController, :type => :controller do
 			
 			activity = FactoryGirl.attributes_for(:activity)
 			post :create, activity: activity
-			#expect(response).to eq(activity)
 			expect(assigns(:activity)).to be_an(Activity)
-			#expect(response).to have_http_status(201)
 		end
 	
 
-
+		# 	it "creates new activity " do
+			
+		# 	activity = FactoryGirl.attributes_for(:activity)
+		# 	post :create, activity: activity
+		# 	expect(response).to have_http_status(201)
+		# end
 	end
 
 end

@@ -1,1 +1,19 @@
-<h1>hey</h1>
+<h1>Your Activities</h1>
+
+<p>Please add your activities here.</p>
+
+<div>
+	<% @activities.each do |a| %>
+	<li>
+		<%= a.category %><br>
+		<%= a.name  %><br>
+		<%= a.address  %><br>
+		<%= a.date_start  %><br>
+		<%= a.date_end  %><br>
+		<%= a.description  %><br>
+		<%= a.cost  %>
+	</li>
+		<% end %>
+
+</div>
+
