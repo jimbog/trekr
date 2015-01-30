@@ -1,0 +1,51 @@
+<h1>Edit Your Activites</h1>
+
+
+<%= form_for @activity do |a| %>
+	<div>
+		<%= a.label :category, "Category:" %>
+		<%= a.text_field :category %>
+	</div>
+
+	<div>
+		<%= a.label :name, "Name:" %>
+		<%= a.text_field :name %>
+	</div>
+
+	<div>
+		<%= a.label :address, "Address:" %>
+		<%= a.text_field :address %>
+	</div>
+
+	<div>
+		<%= a.label :date_start, "Start Date:" %>
+		<%= a.date_field :date_start %>
+	</div>
+
+	<div>
+		<%= a.label :date_end, "End Date:" %>
+		<%= a.date_field :date_end %>
+	</div>
+
+	<div>
+		<%= a.label :description, "Description:" %>
+		<%= a.text_field :description %>
+	</div>
+
+	<div>
+		<%= a.label :cost, "Cost" %>
+		<%= a.text_field :cost %>
+	</div>
+
+		<%= a.submit "Submit Change" %>
+
+<%= button_to "Cancel", activities_path, :class => "button", :method => :get  %>
+<%= link_to "Delete Activity", :activity, method: :delete, data: {confirm: "Are you sure?"} %>
+
+<% end %>
+
+
+
+
+
+
