@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get "/users/show" => "users#show"
 
   namespace :api do
-    resources :users do
+    resources :users, defaults: { format: "json"} do
         resources :trips, only: [:index, :show], defaults: { format: "json"}
       end
   end

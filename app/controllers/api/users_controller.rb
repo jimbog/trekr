@@ -9,5 +9,5 @@ module Api
 
 			respond_with users
 		end
-
+	end
 end
