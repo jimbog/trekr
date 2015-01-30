@@ -50,3 +50,5 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'better_errors'
+gem 'quiet_assets'
