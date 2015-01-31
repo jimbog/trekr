@@ -10,9 +10,9 @@ Rails.application.routes.draw do
   resources :comments
   resources :trips
 
-  namespace :api do
+  namespace :api, defaults: { format: "json"} do
     resources :users do
-        resources :trips, only: [:index, :show, :new], defaults: { format: "json"}
+        resources :trips, only: [:index, :show, :new]
       end
   end
 end

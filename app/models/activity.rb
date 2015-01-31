@@ -1,6 +1,6 @@
 class Activity < ActiveRecord::Base
-  belongs_to :trips
-  belongs_to :users
+  belongs_to :trip
+  has_one :user, through: :trip
 
 	validates :category, presence: true
 	validates :name, presence: true

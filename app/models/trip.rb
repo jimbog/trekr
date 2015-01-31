@@ -10,5 +10,4 @@ class Trip < ActiveRecord::Base
 	# validates :admin, presence: true
 	# validates :privacy, presence: true
 	validates :price_range, presence: true
-
 end
