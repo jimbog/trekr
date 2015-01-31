@@ -1,5 +1,3 @@
-<h1>Edit Your Activites</h1>
-
 <%= form_for @activity do |a| %>
     <div>
       <%= a.label :category, "Category:" %>
@@ -42,9 +40,3 @@
     <% link_to "Delete Activity", :activity, method: :delete, data: {confirm: "Are you sure?"} %>
 
 <% end %>
-
-
-
-
-
-

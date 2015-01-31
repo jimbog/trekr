@@ -11,6 +11,10 @@ class TripsController < ApplicationController
 		@trip = Trip.new
 	end
 
+  def add_friend_to_trip
+    @trip = Trip.find(params[:id])
+    @trip << email
+  end
 
 	def create
 		@trip = Trip.new(trip_params)
