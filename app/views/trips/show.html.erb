@@ -4,20 +4,12 @@
 <%= @trip.destination %><br>
 <%= @trip.start_date %><br>
 <%= @trip.end_date %><br>
+<% @trip.users.each do |u| %>
+    <%= u.name %>
+<%	 end %>
 
 <h2>Add friend to trip</h2>
-<%= form_for @trip do |c| %>
 
-    <div>
-      <%= c.label :name, "Email" %>
-      <%= c.text_field :name %>
-    </div>
-
-    <div>
-      <%= c.submit "Add Friend" %>
-    </div>
-
-<% end %>
 
 <%= link_to "Back", trips_path %>
 <%= link_to "Edit", edit_trip_path %>

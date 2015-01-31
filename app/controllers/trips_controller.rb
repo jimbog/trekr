@@ -11,10 +11,6 @@ class TripsController < ApplicationController
 		@trip = Trip.new
 	end
 
-  def add_friend_to_trip
-    @trip = Trip.find(params[:id])
-    @trip << email
-  end
 
 	def create
 		@trip = Trip.new(trip_params)
@@ -33,6 +29,13 @@ class TripsController < ApplicationController
 
 	def update
 		@trip = Trip.find(params[:id])
+
+    @friend  = User.find_by(email: params[:friend][:email] )
+
+    if @friend and not @trip.users.include?(@friend)
+      @trip.users << @friend
+    end
+
 		if @trip.update_attributes(trip_params)
 
 			redirect_to trips_path
@@ -49,6 +52,6 @@ class TripsController < ApplicationController
 
 	private
 	def trip_params
-		params.require(:trip).permit(:name, :destination, :start_date, :end_date, :trip_length, :admin, :privacy, :price_range)
+		params.require(:trip).permit(:name, :destination, :start_date, :end_date, :trip_length, :admin, :privacy, :price_range, :friend_email, :friend)
 	end
 end

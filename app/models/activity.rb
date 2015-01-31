@@ -1,4 +1,6 @@
 class Activity < ActiveRecord::Base
+  belongs_to :trips
+
 	validates :category, presence: true
 	validates :name, presence: true
 	validates :address, presence: true
