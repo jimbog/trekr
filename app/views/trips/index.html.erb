@@ -1,1 +1,21 @@
 <h1>TRIPS INDEX PAGE</h1>
+
+
+<p>Here is a list of your trips.  </p>
+
+<div>
+  <% current_user.trips.each do |a| %>
+      <li>
+        <%= link_to a.name, trip_path(a.id)  %><br>
+        <%= a.name  %><br>
+        <%= a.start_date  %><br>
+        <%= a.end_date  %><br>
+        <%= a.destination  %><br>
+
+      </li><br>
+  <% end %>
+
+</div>
+
+<%= link_to "Add New Trip", new_trip_path %>
+<%#= link_to "Edit", edit_activity_path %>
