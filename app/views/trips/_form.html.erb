@@ -1,0 +1,30 @@
+<%= form_for @trip do |c| %>
+    <div>
+      <%= c.label :name, "Name" %>
+      <%= c.text_field :name %>
+    </div>
+
+    <div>
+      <%= c.label :destination, "Destination" %>
+      <%= c.text_field :destination %>
+    </div>
+
+    <div>
+      <%= c.label :start_date, "Start Date" %>
+      <%= c.date_select :start_date %>
+    </div>
+
+    <div>
+      <%= c.label :end_date, "End Date" %>
+      <%= c.date_select :end_date %>
+    </div>
+
+    <div>
+      <%= c.label :price_range, "Price Range" %>
+      <%= c.text_field :price_range %>
+    </div>
+
+    <div>
+      <%= c.submit "Submit" %>
+    </div>
+<% end %>
