@@ -4,14 +4,14 @@ describe "Users API", :type => :request do
 
   let(:request_headers) { { "Accept" => "application/json", "Content-type" => "application/json" } }
   
-  it "returns a list of users" do
-    FactoryGirl.create(:user)
+  # it "returns a list of users" do
+  #   FactoryGirl.create(:user)
 
-    get "api/users"
-    users = JSON.parse(response.body)
-    # expect(response).to have_http_status 200
-    expect(users.count).to eq(1)
-  end
+  #   get "api/users"
+  #   users = JSON.parse(response.body)
+  #   # expect(response).to have_http_status 200
+  #   expect(users.count).to eq(1)
+  # end
 
   # it "returns a specific user" do
  #      user = FactoryGirl.create(:user)
