@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.3'
+ruby '2.1.5'
 gem 'rails_12factor', group: :production
 # for Heroku deployment
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -33,6 +33,11 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-digitalocean'
 gem 'omniauth-facebook'
+gem 'carrierwave'
+gem 'fog'
+gem 'mini_magick'
+gem 'poltergeist'
+gem 'figaro'
 
 group :development, :test do 
 	gem 'rspec-rails'

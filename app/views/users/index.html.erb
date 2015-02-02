@@ -1,11 +1,13 @@
 
 
-<h1><%= current_user.email %>, welcome to your TREKR profile page!</h1>
+<h1>Hello <%= current_user.name %>, welcome to your TREKR profile page!</h1>
 
+<%= image_tag(current_user.avatar, :size => "100x100") %>
 <br>
 
-<h2><%#= current_user.name %></h2>
+<h4>Home city: <%= current_user.home_city %></h4>
+
+<h4>Current trips: <%#= current_user.trip.name %><h4>
 
 
-
-<%= link_to "Go to your updated profile page", edit_user_registration_path %>
+<%= link_to "Click here to edit your profile page", edit_user_registration_path %>
