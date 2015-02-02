@@ -11,7 +11,24 @@
 
 <h2>Add an activity</h2>
 
+<h3>Your trips:</h3>
+<div>
+  <% current_user.trips.each do |a| %>
+      <li>
+       <%= image_tag(a.avatar, :size => "80x80") %><br>
+        
+        <%= a.name  %><br>
+        <%= a.start_date  %><br>
+        <%= a.end_date  %><br>
+        <%= a.destination  %><br>
+        <% if user_signed_in? %>
+			<%= link_to "Edit", trip_path(a.id)  %><br>
+		<% end %>
 
+      </li><br>
+  <% end %>
+
+</div>
 
 
 

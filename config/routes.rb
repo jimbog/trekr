@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
   # get "/users/edit" => "users#edit"
   get "/users/show" => "users#show"
+  get "/users" => "users#index"
   resources :activities
   resources :comments
   

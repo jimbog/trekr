@@ -1,22 +1,29 @@
-<h1>TRIPS INDEX PAGE</h1>
+<h1>Trip Recommendations</h1>
 
 
-<p>Here is a list of your trips.  </p>
-
+<h3>Your trips:</h3>
 <div>
   <% current_user.trips.each do |a| %>
       <li>
        <%= image_tag(a.avatar, :size => "80x80") %><br>
-        <%= link_to a.name, trip_path(a.id)  %><br>
+        
         <%= a.name  %><br>
         <%= a.start_date  %><br>
         <%= a.end_date  %><br>
         <%= a.destination  %><br>
+        <% if user_signed_in? %>
+			<%= link_to "Edit", trip_path(a.id)  %><br>
+		<% end %>
 
       </li><br>
   <% end %>
 
 </div>
+
+<br><br><br>
+<p>Here is a list of recently added trips. </p>
+<br><br><br>
+
 
 <%= link_to "Add New Trip", new_trip_path %>
 <%#= link_to "Edit", edit_activity_path %>
