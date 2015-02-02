@@ -11,8 +11,9 @@ Rails.application.routes.draw do
   resources :trips
 
   namespace :api do
-    resources :users do
-        resources :trips, only: [:index, :show, :new], defaults: { format: "json"}
-      end
+    resources :trips, only: [:index], defaults: { format: "json" }
+        # resources :trips, only: [:index, :show, :new], defaults: { format: "json"}
+      # end
+    # resources :trips
   end
 end
