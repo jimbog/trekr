@@ -3,7 +3,7 @@
 
 <h3>Your trips:</h3>
 <div>
-  <% current_user.trips.each do |a| %>
+  <% @trips.each do |a| %>
       <li>
        <%= image_tag(a.avatar, :size => "80x80") %><br>
         
