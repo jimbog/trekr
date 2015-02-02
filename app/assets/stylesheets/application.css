@@ -29,6 +29,7 @@ a {
 }
 .navbar {
 	background: #16a085;
+	border-bottom: 4px solid black;
 }
 
 .navbar-default .navbar-brand {
@@ -43,4 +44,11 @@ footer {
 }
 .form-text-header {
 	font-size: 18px;
+}
+.bg-splasher {
+	background-image: url("splash-bg.jpg");
+	background-size: cover;
+	margin-top: -20px;
+	margin-bottom: -70px;
+	height: 700px;
 }
