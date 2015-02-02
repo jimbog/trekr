@@ -26,6 +26,7 @@ RSpec.describe Activity, :type => :model do
 		activity = FactoryGirl.build(:activity, date_end: nil)
 		expect(activity).to be_invalid
 	end
+
 	it "is invalid without a description" do
 		activity = FactoryGirl.build(:activity, description: nil)
 		expect(activity).to be_invalid

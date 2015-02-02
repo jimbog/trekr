@@ -25,6 +25,11 @@ RSpec.describe Trip, :type => :model do
 		expect(trip).to be_invalid
 	end
 
+	# it "is invalid without a properly formatted start date" do 
+	# 	activity = FactoryGirl.build(:activity, date_start: "2015-01-31 00:00:00")
+	# 	expect(activity).to be_invalid
+	# end
+
 	it "is invalid without a trip length" do
 		trip = FactoryGirl.build(:trip, trip_length: nil)
 		expect(trip).to be_invalid
