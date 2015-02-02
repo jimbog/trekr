@@ -1,4 +1,6 @@
-<%= form_for @trip do |c| %>
+<%= form_for [@user, @trip] do |f| %>
+
+    <%= f.fields_for :trip_attributes do |c| %>
     <div>
       <%= c.label :name, "Name" %>
       <%= c.text_field :name %>
@@ -32,4 +34,7 @@
     <div>
       <%= c.submit "Submit" %>
     </div>
+<% end %>
+
+<%#= f.submit "My Trips!" %>
 <% end %>
