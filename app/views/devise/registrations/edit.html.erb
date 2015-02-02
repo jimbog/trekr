@@ -10,8 +10,10 @@
     <%= f.label :home_city, "Your Home City" %><br />
     <%= f.text_field :home_city %>
   </div>
+
   <div>
-    <%= f.label :avatar, "Your Avatar" %><br />
+  <%= image_tag(current_user.avatar, :size => "100x100") %>
+    <%= f.label :avatar, "Your current Avatar" %><br />
     <%= f.file_field :avatar %>
   </div>
 
