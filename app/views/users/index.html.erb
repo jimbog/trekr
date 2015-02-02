@@ -1,54 +1,31 @@
-
-
-<h1>Hello <%= current_user.name %>, welcome to your TREKR profile page!</h1>
-
-
-
-<div>
-  <% current_user.trips.each do |a| %>
-      <li>
-       <%= image_tag(a.avatar, :size => "80x80") %><br>
-        
-        <%= a.name  %><br>
-        <%= a.start_date  %><br>
-        <%= a.end_date  %><br>
-        <%= a.destination  %><br>
-        <% if user_signed_in? %>
-			<%= link_to "Edit", trip_path(a.id)  %><br>
-		<% end %>
-
-      </li><br>
-  <% end %>
+<div class="trips-bg">
+<div class="container"><br><br>
+<div class="text-header-trips">
+<h1>Welcome back <%= current_user.name %></h1>
+<h4>Here are submissions from you and friends!</h4>
+<%= link_to "+ Add New Trip", new_trip_path, class: "btn btn-warning" %>
 
 </div>
+  <div class="row">
 
+		<div>
+		  <% current_user.trips.each do |a| %>
+		  <div class="col-md-3 panel all-listing"><br>
+		       <%= image_tag(a.avatar, :size => "250x250") %><br>
+		        
+		        <h4>Trip Name:</h4><%= a.name  %><br>
+		        <h4>Destination:</h4><%= a.destination  %><br>
+		        <h4>Travel Start Date:</h4><%= a.start_date  %><br>
+		        <h4>Trip End Date:</h4><%= a.end_date  %><br>
+		        <%= link_to "Edit", edit_trip_path(a.id), class: "btn btn-default"  %><br>
 
-<% current_user.trips.each do |a| %>
-      <li>
-       <%= image_tag(a.avatar, :size => "80x80") %><br>
-        
-        <%= a.name  %><br>
-        <%= a.start_date  %><br>
-        <%= a.end_date  %><br>
-        <%= a.destination  %><br>
-        <% if user_signed_in? %>
-			<%= link_to "Edit", trip_path(a.id)  %><br>
-		<% end %>
+		        
 
-      </li><br>
-  <% end %>
+		      <br></div>
+		  <% end %>
 
-
-
-
-
-
-<%= image_tag(current_user.avatar, :size => "100x100") %>
-<br>
-
-<h4>Home city: <%= current_user.home_city %></h4>
-
-<h4>Current trips: <%#= current_user.trip.name %><h4>
-<br><br>
-<%= link_to "Add New Trip", new_trip_path %>
-
+		</div>
+	</div>
+</div><br><br><br>
+<%#= link_to "Edit", edit_activity_path %>
+</div>
