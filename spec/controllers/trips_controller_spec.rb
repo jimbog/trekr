@@ -4,7 +4,7 @@ RSpec.describe TripsController, :type => :controller do
 	it 'responds with success' do
       expect(response).to be_success
     end
-    it "will get redirected as new" do 
+    it "will get redirected at new" do 
 		get :new
 		assert_response :redirect
 	end
@@ -16,5 +16,5 @@ RSpec.describe TripsController, :type => :controller do
 		get :create
 		assert_response :redirect
 	end
-	
+
 end
