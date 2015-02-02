@@ -1,5 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Comment, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "is invalid without a comment" do
+		comment = FactoryGirl.build(:comment, category: nil)
+		expect(comment).to be_invalid
 end

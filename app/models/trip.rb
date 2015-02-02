@@ -1,6 +1,7 @@
 class Trip < ActiveRecord::Base
   has_and_belongs_to_many :users
   has_many :activities
+  has_many :comments
 
 	validates :name, presence: true
 	validates :destination, presence: true

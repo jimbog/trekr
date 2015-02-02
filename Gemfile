@@ -38,6 +38,7 @@ gem 'fog'
 gem 'mini_magick'
 gem 'poltergeist'
 gem 'figaro'
+gem 'simple_form'
 
 group :development, :test do 
 	gem 'rspec-rails'

@@ -1,26 +1,33 @@
 class CommentsController < ApplicationController
 
-	def index
-		@comments = Comment.all
-	end
+	# def index
+	# 	@comments = Comment.all
+	# end
 
-	def show
-		@comment = Comment.find(params[:id])
-	end
+	# def show
+	# 	@comment = Comment.find(params[:id])
+	# end
 
 	def new
 		@comment = Comment.new
 	end
 
 	def create
-		@comment = Comment.new(comment_params)
-		if @comment.save
-			redirect_to comments_path
-		else
-			render :new
-		end
-
+		@trip = Comment.find(params[:trips_id])
+		@comment = Comment.create(activity_params)
+		@comment.users_id = current_user.id
+		@comment.trips_id = @trip.id
 	end
+
+	# def create
+	# 	@comment = Comment.new(comment_params)
+	# 	if @comment.save
+	# 		redirect_to comments_path
+	# 	else
+	# 		render :new
+	# 	end
+
+	# end
 
 	def edit
 		@comment = Comment.find(params[:id])

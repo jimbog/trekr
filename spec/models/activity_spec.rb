@@ -7,12 +7,10 @@ RSpec.describe Activity, :type => :model do
 		expect(activity).to be_invalid
 	end
 
-
 	it "is invalid without a name" do
 		activity = FactoryGirl.build(:activity, name: nil)
 		expect(activity).to be_invalid
 	end
-
 
 	it "is invalid without an address" do 
 		activity = FactoryGirl.build(:activity, address: nil)
@@ -37,6 +35,4 @@ RSpec.describe Activity, :type => :model do
 		activity = FactoryGirl.build(:activity, cost: nil)
 		expect(activity).to be_invalid
 	end
-
-
 end

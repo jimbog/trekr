@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150131204601) do
+ActiveRecord::Schema.define(version: 20150202080126) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,8 @@ ActiveRecord::Schema.define(version: 20150131204601) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "comment"
+    t.integer  "users_id"
+    t.integer  "trips_id"
   end
 
   create_table "trips", force: true do |t|
@@ -50,6 +52,8 @@ ActiveRecord::Schema.define(version: 20150131204601) do
     t.integer  "price_range"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "users_id"
+    t.integer  "trips_id"
   end
 
   create_table "trips_users", id: false, force: true do |t|

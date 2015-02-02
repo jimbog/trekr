@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "/users/show" => "users#show"
   resources :activities
   resources :comments
+  
   resources :trips
 
   namespace :api do
