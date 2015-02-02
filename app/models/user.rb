@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
 
-  mount_uploader :avatar, AvatarUploader
+  
 
   has_and_belongs_to_many :trips
   validates :name, presence: true
@@ -11,7 +11,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:digitalocean, :facebook]
-         
+  
+  mount_uploader :avatar, AvatarUploader
+
   def self.from_omniauth(auth)
       where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
         user.provider = auth.provider
@@ -20,5 +22,10 @@ class User < ActiveRecord::Base
         user.password = Devise.friendly_token[0,20]
       end
   end
+
+  # def as_json(options={})
+  #     super(:only => [:user],
+  #           :methods => 
+
 
 end
