@@ -18,7 +18,9 @@
       <ul class="nav navbar-nav navbar-right">       
             <li class="divider"></li>
           <% if user_signed_in? %>
-              <li><%= link_to "View Trips", users_path %></li>
+            <li><%= link_to "All Trips", trips_path %></li>
+              <li><%= link_to "My Trips", users_path %></li>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
               <li><%= image_tag(current_user.avatar, :size => "50x50") %> </li>
 
               <li><%= link_to current_user.name, edit_user_registration_path %></li>

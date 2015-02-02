@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :omniauthable, :omniauth_providers => [:digitalocean, :facebook]
+         :omniauthable, :omniauth_providers => []
   
   mount_uploader :avatar, AvatarUploader
 
