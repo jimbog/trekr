@@ -12,4 +12,6 @@ class Trip < ActiveRecord::Base
 	# validates :privacy, presence: true
 	validates :price_range, presence: true
 
+	mount_uploader :avatar, AvatarUploader
+
 end

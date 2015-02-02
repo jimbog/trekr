@@ -25,6 +25,12 @@
     </div>
 
     <div>
+  <%= image_tag(@trip.avatar, :size => "100x100") %>
+    <%= c.label :avatar, "Your current Avatar" %><br />
+    <%= c.file_field :avatar %>
+  </div>
+
+    <div>
       <%= label :email, "Friend" %>
       <%= text_field :friend, :email %>
     </div>

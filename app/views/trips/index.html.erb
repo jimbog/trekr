@@ -6,6 +6,7 @@
 <div>
   <% current_user.trips.each do |a| %>
       <li>
+       <%= image_tag(a.avatar, :size => "80x80") %><br>
         <%= link_to a.name, trip_path(a.id)  %><br>
         <%= a.name  %><br>
         <%= a.start_date  %><br>
