@@ -6,9 +6,26 @@
 <%= @trip.end_date %><br>
 <% @trip.users.each do |u| %>
     <%= u.name %>
-<%	 end %>
+<% end %>
 
 
+<h2>Activities</h2>
+
+<%= @activity %>
+
+
+<br><br><br>
+<%= @activity.name %><br>
+<%= @activity.category %><br>
+<%= @activity.cost %><br>
+<%= @activity.description %>
+
+
+<br><br><br>
+
+<div id="map_wrapper">
+    <div id="map_canvas" class="mapping"></div>
+</div>
 
 
 <%= link_to "Back", trips_path %>

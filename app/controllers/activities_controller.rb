@@ -15,6 +15,11 @@ class ActivitiesController < ApplicationController
 
 	def create
 		@activity = Activity.new(activity_params)
+		@user = current_user
+		# @activity.users << current_user
+		# @trip.activities << @activity
+
+
 		if @activity.save
 			redirect_to activities_path
 		else
@@ -44,6 +49,6 @@ class ActivitiesController < ApplicationController
 
 	private
 	def activity_params
-		params.require(:activity).permit(:category, :name, :address, :date_start, :date_end, :description, :cost)
+		params.require(:activity).permit(:category, :name, :address, :date_start, :date_end, :description, :cost, :trips_id, :users_id)
 	end
 end
