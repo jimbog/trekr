@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container"><br><br>
   <div class="row">
     <div class="col-md-6 col-md-offset-3 ">
       <div class="panel panel-default">
@@ -11,12 +11,12 @@
         <%= form_for @trip do |c| %>
             <div>
               <%= c.label :name, "Name",class: "form-text-header" %>
-              <%= c.text_field :name, :placeholder => "ex. Trip with Chief Keef to Chi-city", class: "form-control" %>
+              <%= c.text_field :name, :placeholder => "ex. Gettin wild with Chief Keef", class: "form-control" %>
             </div>
 
             <div>
               <%= c.label :destination, "Destination", class: "form-text-header" %>
-              <%= c.text_field :destination, :placeholder => "ex. Chicago Illinois", class: "form-control" %>
+              <%= c.text_field :destination, :placeholder => "ex. Chicago", class: "form-control" %>
             </div>
 
             <div><br>
@@ -33,10 +33,11 @@
               <%= c.label :price_range, "Price Range", class: "form-text-header" %>
               <%= c.text_field :price_range, :placeholder => "$", class: "form-control" %>
             </div>
+            
 
             <div><br><br>
-            <%= c.label :avatar, "Your current Avatar", class: "form-text-header" %><br />
-          <%= image_tag(@trip.avatar, :size => "100x100") %><br><br>
+            <%= c.label :avatar, "Trip Avatar", class: "form-text-header" %><br />
+          <%= image_tag(@trip.avatar, :size => "400x400") %><br><br>
             
             <%= c.file_field :avatar %>
           </div>
